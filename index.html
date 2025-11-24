@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mc FPS Artırma</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: white;
+            text-align: center;
+        }
+        .container { padding: 40px; }
+        h1 { font-size: 28px; margin-bottom: 10px; }
+        p { font-size: 18px; opacity: 0.8; }
+        .info-box {
+            background: #161b22;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 10px;
+            border: 1px solid #30363d;
+        }
+        .label { font-weight: bold; color: #58a6ff; }
+        footer { margin-top: 40px; opacity: 0.7; }
+    </style>
+
+    <script>
+        function showDeviceInfo() {
+            document.getElementById("ua").innerText = navigator.userAgent;
+            document.getElementById("ram").innerText = navigator.deviceMemory ? navigator.deviceMemory + " GB" : "Desteklemiyor";
+            document.getElementById("cpu").innerText = navigator.hardwareConcurrency + " çekirdek";
+            document.getElementById("lang").innerText = navigator.language;
+            document.getElementById("res").innerText = window.screen.width + "x" + window.screen.height;
+        }
+    </script>
+</head>
+
+<body onload="showDeviceInfo()">
+    <div class="container">
+        <h1>Mc FPS Artırma</h1>
+        <p>Minecraft için optimize edilmiş FPS geliştirme sayfası.</p>
+
+        <div class="info-box">
+            <h2>Cihaz Bilgilerin</h2>
+            <p><span class="label">Tarayıcı:</span> <span id="ua"></span></p>
+            <p><span class="label">RAM:</span> <span id="ram"></span></p>
+            <p><span class="label">CPU:</span> <span id="cpu"></span></p>
+            <p><span class="label">Dil:</span> <span id="lang"></span></p>
+            <p><span class="label">Ekran Çözünürlüğü:</span> <span id="res"></span></p>
+        </div>
+
+        <footer>
+            By RexHack
+        </footer>
+    </div>
+</body>
+</html>
